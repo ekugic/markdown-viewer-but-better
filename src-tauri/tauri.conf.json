@@ -1,0 +1,44 @@
+{
+  "productName": "Markdown Viewer",
+  "version": "0.1.0",
+  "identifier": "com.markdown-viewer.app",
+  "build": {
+    "beforeDevCommand": "trunk serve",
+    "devUrl": "http://localhost:8080",
+    "beforeBuildCommand": "trunk build",
+    "frontendDist": "../dist"
+  },
+  "bundle": {
+    "active": false,
+    "targets": ["deb", "appimage"],
+    "icon": [],
+    "linux": {
+      "deb": {
+        "depends": ["libwebkit2gtk-4.1-0", "libgtk-3-0"]
+      },
+      "appimage": {
+        "bundleMediaFramework": false
+      }
+    }
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Markdown Viewer",
+        "width": 1200,
+        "height": 800,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "plugins": {
+    "dialog": {
+      "all": true,
+      "open": true
+    }
+  }
+}
