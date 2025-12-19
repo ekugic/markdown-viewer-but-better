@@ -15,7 +15,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
-            background: #f5f7fa;
+            background: #ffffff;
             color: #1a202c;
             overflow: hidden;
         }
@@ -32,21 +32,10 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 14px 24px;
+            padding: 12px 24px;
             background: #ffffff;
-            border-bottom: 1px solid #e2e8f0;
-            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e8e8e8;
             position: relative;
-        }
-
-        .toolbar::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #cbd5e0, transparent);
         }
 
         button {
@@ -98,13 +87,13 @@
         .content-area {
             flex: 1;
             overflow: auto;
-            padding: 40px;
-            background-color: #fafbfc;
+            padding: 0;
+            background-color: #ffffff;
             scroll-behavior: smooth;
         }
 
         .content-area::-webkit-scrollbar {
-            width: 12px;
+            width: 8px;
         }
 
         .content-area::-webkit-scrollbar-track {
@@ -112,28 +101,26 @@
         }
 
         .content-area::-webkit-scrollbar-thumb {
-            background: #cbd5e0;
-            border-radius: 6px;
-            border: 3px solid #fafbfc;
+            background: #e0e0e0;
+            border-radius: 4px;
         }
 
         .content-area::-webkit-scrollbar-thumb:hover {
-            background: #a0aec0;
+            background: #c0c0c0;
         }
 
         .markdown-body {
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 100%;
+            margin: 0;
             background: #ffffff;
-            padding: 48px 64px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-            animation: fadeIn 0.3s ease-out;
+            padding: 32px 48px;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         .raw-view {
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 100%;
+            margin: 0;
             font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
             font-size: 13px;
             line-height: 1.7;
@@ -141,11 +128,10 @@
             word-wrap: break-word;
             background: #ffffff;
             color: #2d3748;
-            padding: 32px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-            animation: fadeIn 0.3s ease-out;
+            padding: 32px 48px;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
         }
 
         .welcome {
@@ -154,9 +140,6 @@
             text-align: center;
             padding: 60px 40px;
             background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.03);
-            animation: fadeIn 0.3s ease-out;
         }
 
         .welcome h1 {
@@ -193,21 +176,17 @@
 
         @media (prefers-color-scheme: dark) {
             body {
-                background: #0f1419;
-                color: #e2e8f0;
+                background: #1a1a1a;
+                color: #e8e8e8;
             }
 
             .app-container {
-                background-color: #1a1f2e;
+                background-color: #1a1a1a;
             }
 
             .toolbar {
-                background: #1a1f2e;
-                border-bottom: 1px solid #2d3748;
-            }
-
-            .toolbar::after {
-                background: linear-gradient(90deg, transparent, #2d3748, transparent);
+                background: #1a1a1a;
+                border-bottom: 1px solid #333333;
             }
 
             button {
@@ -216,59 +195,54 @@
 
             button:hover {
                 background: #3182ce;
-                box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
             }
 
             .mode-indicator {
-                background: #2d3748;
-                color: #cbd5e0;
-                border-color: #4a5568;
+                background: #2a2a2a;
+                color: #e8e8e8;
+                border-color: #444444;
             }
 
             .file-name {
-                color: #a0aec0;
+                color: #b8b8b8;
             }
 
             .content-area {
-                background-color: #151a23;
+                background-color: #1a1a1a;
             }
 
             .content-area::-webkit-scrollbar-thumb {
-                background: #4a5568;
-                border-color: #151a23;
+                background: #444444;
             }
 
             .content-area::-webkit-scrollbar-thumb:hover {
-                background: #718096;
+                background: #555555;
             }
 
             .markdown-body {
-                background: #1e2433;
-                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+                background: #1a1a1a;
+                color: #e8e8e8;
             }
 
             .raw-view {
-                background: #1e2433;
-                color: #e2e8f0;
-                border-color: #2d3748;
-                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+                background: #1a1a1a;
+                color: #e8e8e8;
             }
 
             .welcome {
-                background: #1e2433;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+                background: #1a1a1a;
             }
 
             .welcome h1 {
-                color: #f7fafc;
+                color: #f0f0f0;
             }
 
             .welcome p {
-                color: #a0aec0;
+                color: #b8b8b8;
             }
 
             .welcome p:last-child {
-                color: #718096;
+                color: #888888;
             }
         }
     </style>
