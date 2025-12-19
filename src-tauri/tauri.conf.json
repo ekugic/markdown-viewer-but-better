@@ -4,17 +4,23 @@
   "identifier": "com.markdown-viewer.app",
   "build": {
     "beforeDevCommand": "trunk serve",
-    "devUrl": "http://localhost:8080",
+    "devUrl": "http://localhost:3000",
     "beforeBuildCommand": "trunk build",
     "frontendDist": "../dist"
   },
   "bundle": {
     "active": false,
-    "targets": ["deb", "appimage"],
+    "targets": [
+      "deb",
+      "appimage"
+    ],
     "icon": [],
     "linux": {
       "deb": {
-        "depends": ["libwebkit2gtk-4.1-0", "libgtk-3-0"]
+        "depends": [
+          "libwebkit2gtk-4.1-0",
+          "libgtk-3-0"
+        ]
       },
       "appimage": {
         "bundleMediaFramework": false
@@ -33,12 +39,6 @@
     ],
     "security": {
       "csp": null
-    }
-  },
-  "plugins": {
-    "dialog": {
-      "all": true,
-      "open": true
     }
   }
 }
